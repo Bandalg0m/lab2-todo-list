@@ -1,0 +1,7 @@
+<div class="todo-list">
+  <div class="todo-list__title" >{{listTitle}}</div>
+  <div class="todo-list__item" *ngFor="let record of todoListService.todoList">
+    <app-list-record [title] = 'record.name' [status]='record.status'></app-list-record>
+  </div>
+
+</div>
