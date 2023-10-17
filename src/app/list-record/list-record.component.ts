@@ -15,6 +15,9 @@ export class ListRecordComponent implements OnInit {
 
   @Input()
   title?: string
+
+  @Input()
   status?: keyof typeof Status
+
 
 }
