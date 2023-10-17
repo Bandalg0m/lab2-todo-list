@@ -1,8 +1,10 @@
+import {Status} from "./types";
+
 export class TodoListRecord {
   constructor(
     public id: number,
     public name: string,
-    public status: number
+    public status: keyof typeof Status,
   ) {
   }
 
