@@ -1,0 +1,37 @@
+.record {
+  display: flex;
+  flex-direction: row;
+  width: 40rem;
+  min-height: 2rem;
+  border: 1px solid black;
+  border-radius: 0.5rem;
+  background-color: lightgray;
+}
+
+.record__title {
+  margin: auto;
+  padding: 0.5px 0.5px;
+  width: 100%;
+  height: max-content;
+  text-align: center;
+  overflow: hidden;
+  border-radius: 0 0.5rem 0.5rem 0;
+}
+
+.record__status {
+  background-color: lightgray;
+  width: 10px;
+  border-radius: 0.5rem 0 0 0.5rem;
+
+  &_normal {
+    background-color: blue;
+  }
+
+  &_important {
+    background-color: red;
+  }
+
+  &_done {
+    background-color: green;
+  }
+}
