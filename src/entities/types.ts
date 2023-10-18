@@ -10,3 +10,8 @@ export enum Status {
   important = 'important',
   done = 'done'
 }
+
+export interface INewRecord {
+  name: string;
+  isImportant: boolean;
+}
