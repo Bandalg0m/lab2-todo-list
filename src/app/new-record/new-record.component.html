@@ -1,0 +1,10 @@
+<div class="new-record">
+  <div class="input-container">
+    <input class="input-container__input" placeholder="Что сделать?" #recordNameInput>
+  </div>
+  <button class="new-record__button" (click)="newRecord(recordNameInput, recordStatusInput)">Добавить</button>
+  <div class="status-container">
+    <span class="status-container__title">Это важно?</span>
+    <input class="status-container__checkbox" type="checkbox" #recordStatusInput>
+  </div>
+</div>

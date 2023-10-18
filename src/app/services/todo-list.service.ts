@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import {ITodoListItem, Status} from "../../entities/types";
+import {INewRecord, ITodoListItem, Status} from "../../entities/types";
 import {TodoListRecord} from "../../entities/todoRecord";
 
 @Injectable({
@@ -12,9 +12,10 @@ export class TodoListService {
   todoList: Array<ITodoListItem> = [this.listItemOne, this.listItemTwo, this.listItemThree]
   constructor() { }
 
-  add(name: string): void{
+  add(value: INewRecord): void{
     const id: number = this.todoList.length + 1;
-    const newRecord: ITodoListItem = new TodoListRecord(id, name, 'normal');
+    const status: keyof typeof Status = value.isImportant ? 'important' : 'normal'
+    const newRecord: ITodoListItem = new TodoListRecord(id, value.name, status);
     this.todoList = [...this.todoList, newRecord];
   }
 

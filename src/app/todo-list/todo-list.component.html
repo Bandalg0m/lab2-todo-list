@@ -3,5 +3,7 @@
   <div class="todo-list__item" *ngFor="let record of todoListService.todoList">
     <app-list-record [title] = 'record.name' [status]='record.status'></app-list-record>
   </div>
-
+  <div class="todo-list__addition-form">
+  <app-new-record (newRecordValue)="todoListService.add($event)"></app-new-record>
+  </div>
 </div>
