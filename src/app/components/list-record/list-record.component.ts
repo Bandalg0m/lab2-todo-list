@@ -1,5 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {Status} from "../../entities/types";
+import {Status} from "../../../entities/types";
 
 @Component({
   selector: 'app-list-record',

@@ -1,5 +1,5 @@
 import {Component, EventEmitter, OnInit, Output} from '@angular/core';
-import {INewRecord} from "../../entities/types";
+import {INewRecord} from "../../../entities/types";
 
 @Component({
   selector: 'app-new-record',
