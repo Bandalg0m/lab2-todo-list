@@ -1,4 +1,13 @@
 <div class="record">
   <div class="record__status record__status_{{status}}"></div>
+  <div class="status-select-container">
+    <span class="status-select-container__title">Статус</span>
+    <select (ngModelChange)="handleStatusChange($event)" class="status-select-container__select" [(ngModel)]="status">
+      <option value="{{Status.normal}}">Нормальный</option>
+      <option value="{{Status.important}}">Важный</option>
+      <option value="{{Status.done}}">Завершенный</option>
+    </select>
+  </div>
   <div class="record__title">{{title}}</div>
+
 </div>

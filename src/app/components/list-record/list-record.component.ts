@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {Status} from "../../../entities/types";
 
 @Component({
@@ -19,5 +19,11 @@ export class ListRecordComponent implements OnInit {
   @Input()
   status?: keyof typeof Status
 
+  @Output() statusChange = new EventEmitter<keyof typeof Status>()
 
+  handleStatusChange(event: keyof typeof Status):void {
+    this.statusChange.emit(event)
+  }
+
+  protected readonly Status = Status;
 }

@@ -1,0 +1,17 @@
+<div class="search">
+  <div class="search-container">
+    <input placeholder="Поиск по названию" class="search-container__input" [(ngModel)]="name">
+  </div>
+  <div class="button-container">
+    <button class="button-container__button" (click)="newSearch()">Найти</button>
+  </div>
+  <div class="filter-container">
+    Статус
+    <select class="filter-container__select" [(ngModel)]="status">
+      <option value="all">Все</option>
+      <option value="{{Status.normal}}">Нормальный</option>
+      <option value="{{Status.important}}">Важный</option>
+      <option value="{{Status.done}}">Завершенный</option>
+    </select>
+  </div>
+</div>

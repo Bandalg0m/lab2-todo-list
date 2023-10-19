@@ -15,3 +15,7 @@ export interface INewRecord {
   name: string;
   isImportant: boolean;
 }
+export interface ISearchQuery {
+  name: string;
+  status: string;
+}
