@@ -5,13 +5,15 @@ import { AppComponent } from './app.component';
 import { TodoListComponent } from './components/todo-list/todo-list.component';
 import { NewRecordComponent } from './components/new-record/new-record.component';
 import { ListRecordComponent } from "./components/list-record/list-record.component";
+import { SearchComponent } from './components/search/search.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ListRecordComponent,
     TodoListComponent,
-    NewRecordComponent
+    NewRecordComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,
