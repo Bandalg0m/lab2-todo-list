@@ -26,12 +26,10 @@ export class TodoListService {
     this.filter(this.filers)
   }
 
-  delete(id: number): void{
-    this.sourceTodoList = this.todoList.filter(item => item.id !== id);
-  }
-
-  handleStatus(id:number, newStatus: keyof typeof Status): void{
-    this.sourceTodoList = this.todoList.map(item => item.id === id ? {...item, status: newStatus} : item);
+  delete(id: number): void {
+    this.sourceTodoList = this.sourceTodoList.filter(item => item.id !== id);
+    this.todoList = [...this.sourceTodoList]
+    this.filter(this.filers)
   }
 
   filter(value: ISearchQuery): void {
