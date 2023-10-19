@@ -21,8 +21,14 @@ export class ListRecordComponent implements OnInit {
 
   @Output() statusChange = new EventEmitter<keyof typeof Status>()
 
+  @Output() deleteRecord = new EventEmitter()
+
   handleStatusChange(event: keyof typeof Status):void {
     this.statusChange.emit(event)
+  }
+
+  handleDelete():void {
+    this.deleteRecord.emit()
   }
 
   protected readonly Status = Status;

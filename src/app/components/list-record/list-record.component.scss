@@ -47,3 +47,22 @@
 .status-select-container__title {
   font-size: 13px;
 }
+
+.status-select-container__select {
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.delete-button-container {
+  display: flex;
+  align-items: center;
+  width: 5rem;
+  margin-right: 1rem;
+}
+
+.delete-button-container__button {
+  &:hover {
+    cursor: pointer;
+  }
+}
