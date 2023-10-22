@@ -1,10 +1,11 @@
-import {Component, EventEmitter, OnInit, Output} from '@angular/core';
+import {ChangeDetectionStrategy, Component, EventEmitter, OnInit, Output} from '@angular/core';
 import {INewRecord} from "../../../entities/types";
 
 @Component({
   selector: 'app-new-record',
   templateUrl: './new-record.component.html',
-  styleUrls: ['./new-record.component.scss']
+  styleUrls: ['./new-record.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class NewRecordComponent implements OnInit {
   public name: string = ''

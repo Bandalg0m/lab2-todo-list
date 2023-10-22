@@ -39,7 +39,6 @@ export class TodoListService {
   }
 
   changeStatus(value: keyof typeof Status, id:number):void {
-    console.log(value, id)
     this.sourceTodoList = this.sourceTodoList.map(item => item.id === id ? {...item, status: value} : item)
   }
 

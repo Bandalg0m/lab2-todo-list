@@ -1,10 +1,11 @@
-import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import {ChangeDetectionStrategy, Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {Status} from "../../../entities/types";
 
 @Component({
   selector: 'app-list-record',
   templateUrl: './list-record.component.html',
-  styleUrls: ['./list-record.component.scss']
+  styleUrls: ['./list-record.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ListRecordComponent implements OnInit {
 
