@@ -7,6 +7,7 @@ import { NewRecordComponent } from './components/new-record/new-record.component
 import { ListRecordComponent } from "./components/list-record/list-record.component";
 import { SearchComponent } from './components/search/search.component';
 import { AuthPageComponent } from './components/auth-page/auth-page.component';
+import { AboutComponent } from './components/about/about.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { AuthPageComponent } from './components/auth-page/auth-page.component';
     TodoListComponent,
     NewRecordComponent,
     SearchComponent,
-    AuthPageComponent
+    AuthPageComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,
