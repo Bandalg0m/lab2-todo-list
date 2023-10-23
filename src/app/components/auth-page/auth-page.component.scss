@@ -1,0 +1,52 @@
+.auth-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+.auth-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 1.5rem;
+  padding: 2rem;
+  border: 1px solid black;
+  border-radius: 0.5rem;
+  background-color: whitesmoke;
+}
+
+.auth-container-username__input {
+  box-sizing: border-box;
+  width: 20rem;
+  height: 2rem;
+  padding-left: 0.5rem;
+  border: 1px solid black;
+  border-radius: 0.5rem;
+}
+
+.auth-container-password__input {
+  box-sizing: border-box;
+  width: 20rem;
+  height: 2rem;
+  padding-left: 0.5rem;
+  border: 1px solid black;
+  border-radius: 0.5rem;
+}
+
+.auth-container-controls__login-button {
+  width: 7rem;
+  height: 2rem;
+  border: 1px solid black;
+  border-radius: 0.5rem;
+  background-color: honeydew;
+
+  &:hover {
+    cursor: pointer;
+    color: white;
+    background-color: darkseagreen;
+  }
+}
+
+

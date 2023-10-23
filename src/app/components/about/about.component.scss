@@ -1,0 +1,30 @@
+.about-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+.about-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  height: 20rem;
+  width: 40rem;
+  padding: 2rem;
+  border: 1px solid black;
+  border-radius: 0.5rem;
+  background-color: whitesmoke;
+}
+
+.about-container__title {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.about-container__content {
+  font-size: 20px;
+  line-height: 200%;
+}
