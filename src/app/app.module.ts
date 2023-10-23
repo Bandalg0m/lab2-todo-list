@@ -8,6 +8,7 @@ import { ListRecordComponent } from "./components/list-record/list-record.compon
 import { SearchComponent } from './components/search/search.component';
 import { AuthPageComponent } from './components/auth-page/auth-page.component';
 import { AboutComponent } from './components/about/about.component';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { AboutComponent } from './components/about/about.component';
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
