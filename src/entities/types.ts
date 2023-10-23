@@ -19,3 +19,10 @@ export interface ISearchQuery {
   name: string;
   status: string;
 }
+
+export interface IUser {
+  id: number;
+  email: string;
+  password: string;
+  fio: string;
+}

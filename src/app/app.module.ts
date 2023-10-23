@@ -9,6 +9,9 @@ import { SearchComponent } from './components/search/search.component';
 import { AuthPageComponent } from './components/auth-page/auth-page.component';
 import { AboutComponent } from './components/about/about.component';
 import { AppRoutingModule } from './app-routing.module';
+import { HttpClientModule} from "@angular/common/http";
+import {API_URL, EnvironmentService} from "./services/environment/environment.service";
+import { environment } from "../environments/environment";
 
 @NgModule({
   declarations: [
@@ -23,9 +26,19 @@ import { AppRoutingModule } from './app-routing.module';
   imports: [
     BrowserModule,
     FormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
   ],
-  providers: [],
+  providers: [
+    {
+      provide: EnvironmentService,
+      useClass: EnvironmentService
+    },
+    {
+      provide: API_URL,
+      useValue: environment
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
