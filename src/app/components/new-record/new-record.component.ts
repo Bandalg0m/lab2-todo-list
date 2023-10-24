@@ -19,7 +19,6 @@ export class NewRecordComponent implements OnInit {
   @Output() newRecordValue = new EventEmitter<INewRecord>()
 
   newRecord() {
-    console.log(this.name, this.checkbox)
     const newRecord: INewRecord = {
       name: this.name,
       isImportant: this.checkbox

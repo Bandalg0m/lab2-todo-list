@@ -1,0 +1,17 @@
+[
+  {
+    "id": 1,
+    "name": "Сделай то и сё",
+    "status": "normal"
+  },
+  {
+    "id": 2,
+    "name": "Сделай сё и то",
+    "status": "important"
+  },
+  {
+    "id": 3,
+    "name": "Сделай сразу всё",
+    "status": "done"
+  }
+]
