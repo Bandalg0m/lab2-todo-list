@@ -1,0 +1,27 @@
+.navbar-wrapper {
+  width: 100%;
+  height: 3rem;
+}
+
+.navbar-container {
+  height: 3rem;
+  border: 1px solid black;
+  border-radius: 0.5rem;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  box-sizing: border-box;
+  padding: 0.5rem 30%;
+}
+
+.navbar__button {
+  text-transform: uppercase;
+  width: 10rem;
+  height: 2rem;
+  &:hover {
+    cursor: pointer;
+  }
+}

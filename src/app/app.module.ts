@@ -14,6 +14,7 @@ import {API_URL, EnvironmentService} from "./services/environment/environment.se
 import { environment } from "../environments/environment";
 import {AuthInterceptor} from "./interceptors/auth.interceptor";
 import { MeetupsComponent } from './components/meetups/meetups.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { MeetupsComponent } from './components/meetups/meetups.component';
     SearchComponent,
     AuthPageComponent,
     AboutComponent,
-    MeetupsComponent
+    MeetupsComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,

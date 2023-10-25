@@ -1,10 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import {ChangeDetectionStrategy, Component, OnInit} from '@angular/core';
 import {MeetupsService} from "../../services/meetups/meetups.service";
 
 @Component({
   selector: 'app-meetups',
   templateUrl: './meetups.component.html',
-  styleUrls: ['./meetups.component.scss']
+  styleUrls: ['./meetups.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class MeetupsComponent implements OnInit {
 
