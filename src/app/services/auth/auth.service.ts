@@ -28,7 +28,7 @@ export class AuthService {
     void this.router.navigate(['auth']);
   }
 
-  public getToken(): string | null {
+  public get getToken(): string | null {
     return localStorage.getItem('auth-token')
   }
 
@@ -42,8 +42,8 @@ export class AuthService {
     return JSON.parse(jsonPayload);
   }
 
-  public getUserInfo(): IUser | null {
-    const token = this.getToken();
+  public get getUserInfo(): IUser | null {
+    const token = this.getToken;
     if (token) {
       return this.parseJwt(token)
     }
