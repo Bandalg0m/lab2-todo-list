@@ -21,7 +21,16 @@
   text-transform: uppercase;
   width: 10rem;
   height: 2rem;
+  border: 1px solid black;
+  border-radius: 0.5rem;
   &:hover {
+    background-color: darkgrey;
+    color: whitesmoke;
     cursor: pointer;
   }
+}
+
+.active {
+  border-width: 3px;
+  border-color: lightslategrey;
 }

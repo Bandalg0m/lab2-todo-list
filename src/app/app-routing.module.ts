@@ -7,6 +7,7 @@ import {AuthGuard} from "./guards/auth.guard";
 import {MeetupsComponent} from "./components/meetups/meetups.component";
 
 const routes: Routes = [
+  {path: '', redirectTo: 'main', pathMatch: 'full'},
   { path: 'auth', component: AuthPageComponent },
   { path: 'main', component: TodoListComponent, canActivate: [AuthGuard] },
   { path: 'about', component: AboutComponent },

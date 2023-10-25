@@ -1,9 +1,9 @@
 <div class="navbar-wrapper">
     <div class="navbar-container">
         <div class="navbar">
-            <button *ngIf="service.userInfo" routerLink="/main" class="navbar__button">Главная</button>
-            <button routerLink="/about" class="navbar__button">О проекте</button>
-            <button *ngIf="service.userInfo" routerLink="/meetups" class="navbar__button">Митапы</button>
+            <button *ngIf="service.userInfo" routerLink="/main" routerLinkActive="active" class="navbar__button">Главная</button>
+            <button routerLink="/about" routerLinkActive="active" class="navbar__button">О проекте</button>
+            <button *ngIf="service.userInfo" routerLink="/meetups" routerLinkActive="active" class="navbar__button">Митапы</button>
             <button *ngIf="service.userInfo" (click)="logout()" class="navbar__button">Выход</button>
             <button *ngIf="!service.userInfo" routerLink="/auth" class="navbar__button">Авторизация</button>
         </div>
