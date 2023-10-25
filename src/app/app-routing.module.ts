@@ -4,11 +4,13 @@ import { TodoListComponent } from "./components/todo-list/todo-list.component";
 import { AboutComponent } from "./components/about/about.component";
 import { AuthPageComponent } from "./components/auth-page/auth-page.component";
 import {AuthGuard} from "./guards/auth.guard";
+import {MeetupsComponent} from "./components/meetups/meetups.component";
 
 const routes: Routes = [
   { path: 'auth', component: AuthPageComponent },
   { path: 'main', component: TodoListComponent, canActivate: [AuthGuard] },
   { path: 'about', component: AboutComponent },
+  { path: 'meetups', component: MeetupsComponent, canActivate: [AuthGuard] }
 ];
 
 @NgModule({

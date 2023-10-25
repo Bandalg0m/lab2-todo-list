@@ -9,9 +9,11 @@ import { SearchComponent } from './components/search/search.component';
 import { AuthPageComponent } from './components/auth-page/auth-page.component';
 import { AboutComponent } from './components/about/about.component';
 import { AppRoutingModule } from './app-routing.module';
-import { HttpClientModule} from "@angular/common/http";
+import {HTTP_INTERCEPTORS, HttpClientModule} from "@angular/common/http";
 import {API_URL, EnvironmentService} from "./services/environment/environment.service";
 import { environment } from "../environments/environment";
+import {AuthInterceptor} from "./interceptors/auth.interceptor";
+import { MeetupsComponent } from './components/meetups/meetups.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,8 @@ import { environment } from "../environments/environment";
     NewRecordComponent,
     SearchComponent,
     AuthPageComponent,
-    AboutComponent
+    AboutComponent,
+    MeetupsComponent
   ],
   imports: [
     BrowserModule,
@@ -37,6 +40,11 @@ import { environment } from "../environments/environment";
     {
       provide: API_URL,
       useValue: environment
+    },
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: AuthInterceptor,
+      multi: true
     }
   ],
   bootstrap: [AppComponent]
