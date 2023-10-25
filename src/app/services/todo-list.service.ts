@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import {INewRecord, ISearchQuery, ITodoListItem, Status} from "../../entities/types";
 import {TodoListRecord} from "../../entities/todoRecord";
-import {map} from "rxjs";
 import {HttpClient} from "@angular/common/http";
 
 @Injectable({
@@ -17,7 +16,7 @@ export class TodoListService {
   constructor(private http: HttpClient) { }
   getRecords() {
     return this.http.get<ITodoListItem[]>('assets/todo-list.json')
-    .pipe(map(data => data.map(item => new TodoListRecord(item.id, item.name, item.status))))}
+  }
 
   add(value: INewRecord): void{
     const id: number = this.sourceTodoList.length + 1;

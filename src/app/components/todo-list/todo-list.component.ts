@@ -1,5 +1,7 @@
 import {ChangeDetectionStrategy, ChangeDetectorRef, Component,  OnInit} from '@angular/core';
 import {TodoListService} from "../../services/todo-list.service";
+import {map} from "rxjs";
+import {TodoListRecord} from "../../../entities/todoRecord";
 
 @Component({
   selector: 'app-todo-list',
@@ -14,10 +16,14 @@ export class TodoListComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.todoListService.getRecords().subscribe(value => {
-      this.todoListService.sourceTodoList = value;
-      this.todoListService.todoList = [...this.todoListService.sourceTodoList];
-      this.changeDetection.detectChanges()
+    this.todoListService.getRecords()
+        .pipe(
+          map(data => data.map(item => new TodoListRecord(item.id, item.name, item.status)))
+        )
+        .subscribe(value => {
+          this.todoListService.sourceTodoList = value;
+          this.todoListService.todoList = [...this.todoListService.sourceTodoList];
+          this.changeDetection.detectChanges()
     })
   }
 
